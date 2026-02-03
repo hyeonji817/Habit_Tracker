@@ -1,5 +1,10 @@
 <img width="798" height="394" alt="image" src="https://github.com/user-attachments/assets/eb00bc8c-f2b9-4cfa-91b2-533cc5b26301" />
 
+<img width="767" height="396" alt="image" src="https://github.com/user-attachments/assets/0418bf9d-630e-4066-ac40-be93902cd782" />
+
+<img width="807" height="415" alt="image" src="https://github.com/user-attachments/assets/9f711f38-538c-458b-a318-d9a4bb90c5e6" />
+
+
 [Habit Tracker] 
 1. 제작목적
    - 매일 반복되는 습관을 기록하고 체크할 수 있는 간단한 도구를 만들며, 프론트엔드의 기본인 CRUD 흐름(추가/조회/수정/삭제) 과 상태 관리를 연습하기 위함
