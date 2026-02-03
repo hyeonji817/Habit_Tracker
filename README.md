@@ -1,73 +1,27 @@
-# React + TypeScript + Vite
+<img width="798" height="394" alt="image" src="https://github.com/user-attachments/assets/eb00bc8c-f2b9-4cfa-91b2-533cc5b26301" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Habit Tracker] 
+1. 제작목적
+   - 매일 반복되는 습관을 기록하고 체크할 수 있는 간단한 도구를 만들며, 프론트엔드의 기본인 CRUD 흐름(추가/조회/수정/삭제) 과 상태 관리를 연습하기 위함
+   - 날짜별로 완료 여부를 누적해 사용자에게 성취감과 동기부여를 주는 화면 구성을 목표로 했고, DB 없이도 데이터를 유지할 수 있도록 localStorage 기반 저장을 적용
+   - 이를 통해 “UI 입력 → 상태 업데이트 → 화면 반영 → 저장”으로 이어지는 데이터 흐름을 정확히 이해하는 데 집중함
 
-Currently, two official plugins are available:
+2. 포인트
+  - CRUD (습관 추가/삭제/체크)
+  - 날짜별 체크 기록
+  - localStorage 저장
+  - TypeScript 타입 설계 연습
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. 폴더 구조
+   habit-tracker/
+ ├─ package.json
+ ├─ vite.config.ts
+ ├─ tsconfig.json
+ ├─ index.html
+ └─ src/
+    ├─ main.tsx
+    ├─ App.tsx
+    ├─ types.ts
+    ├─ storage.ts
+    ├─ hooks/useLocalStorageState.ts
+    └─ styles.css
